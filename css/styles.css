@@ -1,0 +1,129 @@
+body {
+  background: linear-gradient(135deg, #00ff00, #00ffff, #ff00ff, #ff0000);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-circle {
+  width: 128px; /* Increased width for better visibility */
+  height: 128px; /* Increased height for better visibility */
+}
+
+.card-container {
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 48px; /* Increased font size for better visibility */
+  font-weight: bold;
+  color: #00ffff;
+}
+
+.bug-card {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.add-bug-container {
+  width: 50%;
+  /* margin: 0 auto; */
+  background: #0a0a0a;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bug-done {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.resolve-button,
+.delete-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.resolve-button {
+  background-color: green;
+  color: white;
+  margin-right: 5px;
+}
+
+.resolve-button:disabled {
+  background-color: lightgray;
+  color: gray;
+}
+
+.resolve-button:hover,
+.delete-button:hover {
+  background-color: #218838;
+}
+
+/* Style for bug list items */
+.list-group-item {
+  background-color: #333; /* Background color */
+  color: #a7287d; /* Text color */
+  padding: 10px; /* Padding */
+  margin-bottom: 10px; /* Bottom margin */
+  border-radius: 5px; /* Border radius */
+}
+
+/* Style for the specific bug list item with ID: 678 */
+#item-678 {
+  background-color: #ff8c00; /* Orange background */
+  border-color: #ffa500; /* Orange border */
+  color: #000; /* Black text */
+}
+
+/* Style for resolved bug list items */
+.bug-done {
+  text-decoration: line-through; /* Strikethrough text for resolved bugs */
+}
