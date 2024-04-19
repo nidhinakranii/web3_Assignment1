@@ -112,12 +112,12 @@ function addBugToList(id, name, bugId, criticality, isResolved) {
 
 async function deleteBug(id) {
   try {
-      await contract.methods.updateBugStatus(id).send({
+      await contract.methods.deleteBug(id).send({
           from: web3.eth.defaultAccount,
           gas: "1000000",
           gasPrice: 1000000000,
       });
-      console.log("Bug marked as resolved successfully.");
+      console.log("Bug deleted.");
 
       // Disable the resolve button after marking the bug as done
       let resolveButton = document.getElementById("resolve-button-" + id);
@@ -131,9 +131,10 @@ async function deleteBug(id) {
           bugItem.classList.add("bug-done");
       }
   } catch (e) {
-      console.log("Failed to mark the bug as resolved. Bug ID: " + id, e);
+      console.log("bug id not deleted " + id, e);
   }
 }
+
 
 async function changeBugStatus(id) {
   try {
